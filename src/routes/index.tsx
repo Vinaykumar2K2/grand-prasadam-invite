@@ -94,7 +94,7 @@ function Invitation() {
             <span className="detail-icon" aria-hidden="true">⌖</span>
             <div>
               <p className="detail-label">వేదిక</p>
-              <p className="detail-value">రంగపూర్ బోద్రై వద్ద</p>
+              <p className="detail-value">రంగపూర్ బోద్రై వద్ధా</p>
             </div>
           </div>
           <div className="detail-separator" aria-hidden="true" />
