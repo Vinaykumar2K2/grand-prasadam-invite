@@ -352,3 +352,104 @@ body,
     font-size: clamp(0.9rem, 3.2vw, 1.05rem);
   }
 }
+
+
+/* Refined mobile composition: bring the invitation elements together and
+   increase hierarchy/readability while preserving the full-screen canvas. */
+@media (max-width: 540px) {
+  .invitation {
+    justify-content: center;
+    gap: clamp(1.1rem, 2.8vh, 1.8rem);
+    padding: clamp(1.8rem, 4vh, 2.6rem) clamp(1rem, 5vw, 1.5rem);
+  }
+
+  .invitation-header {
+    margin-bottom: 0.15rem;
+  }
+
+  .auspicious-line {
+    font-size: clamp(1rem, 3.8vw, 1.15rem);
+  }
+
+  .sacred-divider {
+    margin: 0.35rem auto 0.65rem;
+  }
+
+  .sacred-divider span {
+    width: 3rem;
+  }
+
+  .vinayaka-art {
+    width: clamp(10rem, 42vw, 13rem);
+    margin-bottom: -0.1rem;
+  }
+
+  .mandapam-name {
+    font-size: clamp(1rem, 3.8vw, 1.2rem);
+  }
+
+  .event-heading {
+    margin-top: 0.2rem;
+  }
+
+  .invitation-kicker {
+    font-size: clamp(0.82rem, 3vw, 0.95rem);
+  }
+
+  .event-heading h1 {
+    font-size: clamp(3.5rem, 15vw, 5rem);
+    line-height: 1.08;
+    margin: 0.25rem 0 0.55rem;
+  }
+
+  .organizer-label {
+    margin-top: 0.6rem;
+    font-size: 0.78rem;
+  }
+
+  .event-heading h2 {
+    font-size: clamp(1.2rem, 4.7vw, 1.5rem);
+    line-height: 1.5;
+  }
+
+  .event-details {
+    max-width: 30rem;
+    padding: 0.8rem 0.75rem;
+  }
+
+  .detail-block {
+    max-width: none;
+    gap: 0.8rem;
+    padding: 0.55rem 0.3rem;
+  }
+
+  .detail-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+  }
+
+  .detail-label {
+    font-size: 0.78rem;
+  }
+
+  .detail-value {
+    font-size: clamp(1.05rem, 4vw, 1.25rem);
+    line-height: 1.5;
+  }
+
+  .detail-separator {
+    width: 78%;
+    margin: 0.2rem auto;
+  }
+
+  .lotus-mark {
+    font-size: 1.5rem;
+  }
+
+  .invitation-footer p {
+    margin-top: 0.2rem;
+    font-size: clamp(1rem, 3.8vw, 1.2rem);
+    line-height: 1.55;
+  }
+}
