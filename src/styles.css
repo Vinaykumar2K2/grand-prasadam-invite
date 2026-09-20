@@ -271,3 +271,10 @@
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-delay: 0ms !important; transition-duration: 0.01ms !important; }
   .reveal-item { opacity: 1; transform: none; }
 }
+
+/* The curtain is the invitation's required entrance effect; keep it functional
+   even when the browser requests reduced motion. */
+.curtain-left { animation: curtain-left-auto-open 2.2s cubic-bezier(0.65, 0, 0.2, 1) 0.9s forwards !important; }
+.curtain-right { animation: curtain-right-auto-open 2.2s cubic-bezier(0.65, 0, 0.2, 1) 0.9s forwards !important; }
+.curtain-valance { animation: valance-auto-open 1.9s cubic-bezier(0.65, 0, 0.2, 1) 0.95s forwards !important; }
+.skip-button { animation: curtain-stage-button-hide 1.5s ease 1.35s forwards !important; }
