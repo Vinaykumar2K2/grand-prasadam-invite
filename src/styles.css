@@ -589,3 +589,117 @@ body,
     font-size: clamp(0.88rem, 3vw, 1.04rem);
   }
 }
+
+
+/* Explicit final card mode for phones. These rules intentionally override the
+   earlier full-screen layout so the invitation is visibly a card again. */
+@media (max-width: 540px) {
+  .invitation-page {
+    display: grid !important;
+    place-items: center !important;
+    width: 100% !important;
+    min-height: 100svh !important;
+    height: auto !important;
+    padding: 1rem !important;
+    overflow-y: auto !important;
+  }
+
+  .invitation {
+    position: relative !important;
+    width: 92vw !important;
+    max-width: 430px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 auto !important;
+    padding: 2.1rem 1.25rem 2rem !important;
+    gap: 1.05rem !important;
+    justify-content: center !important;
+    border: 2px solid transparent !important;
+    border-radius: 2px !important;
+    box-shadow:
+      inset 0 0 0 5px var(--invitation-paper),
+      inset 0 0 0 6px color-mix(in oklab, var(--invitation-gold) 56%, transparent),
+      0 18px 45px color-mix(in oklab, var(--invitation-maroon-rich) 20%, transparent) !important;
+  }
+
+  .invitation::before {
+    inset: 0.55rem !important;
+  }
+
+  .vinayaka-art {
+    width: 9.5rem !important;
+  }
+
+  .auspicious-line {
+    font-size: 1rem !important;
+  }
+
+  .mandapam-name {
+    font-size: 1rem !important;
+  }
+
+  .invitation-kicker {
+    font-size: 0.8rem !important;
+  }
+
+  .event-heading h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.08 !important;
+    margin: 0.2rem 0 0.4rem !important;
+  }
+
+  .organizer-label {
+    font-size: 0.72rem !important;
+  }
+
+  .event-heading h2 {
+    font-size: 1.18rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .event-details {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    width: 100% !important;
+    max-width: 31rem !important;
+    padding: 0.7rem 0.25rem !important;
+  }
+
+  .detail-block {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0.3rem 0.35rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .detail-icon {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  .detail-label {
+    font-size: 0.68rem !important;
+  }
+
+  .detail-value {
+    font-size: 0.98rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .detail-separator {
+    width: 1px !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  .lotus-mark {
+    font-size: 1.35rem !important;
+  }
+
+  .invitation-footer p {
+    font-size: 0.98rem !important;
+    line-height: 1.5 !important;
+  }
+}
