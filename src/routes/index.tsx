@@ -31,9 +31,11 @@ function Invitation() {
   const [curtainVisible, setCurtainVisible] = useState(true);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const openTimer = window.setTimeout(() => setCurtainOpen(true), reduceMotion ? 0 : 500);
-    const hideTimer = window.setTimeout(() => setCurtainVisible(false), reduceMotion ? 50 : 2500);
+    // Always show the opening sequence on first load. The invitation is intentionally
+    // designed as a theatrical reveal, so it should remain visible long enough to see
+    // the curtains close-to-open transition even when the browser prefers reduced motion.
+    const openTimer = window.setTimeout(() => setCurtainOpen(true), 900);
+    const hideTimer = window.setTimeout(() => setCurtainVisible(false), 3300);
 
     return () => {
       window.clearTimeout(openTimer);
@@ -43,7 +45,7 @@ function Invitation() {
 
   const openCurtain = () => {
     setCurtainOpen(true);
-    window.setTimeout(() => setCurtainVisible(false), 1900);
+    window.setTimeout(() => setCurtainVisible(false), 2500);
   };
 
   const replayCurtain = () => {
