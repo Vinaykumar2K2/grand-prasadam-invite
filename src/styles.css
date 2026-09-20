@@ -278,3 +278,14 @@
 .curtain-right { animation: curtain-right-auto-open 2.2s cubic-bezier(0.65, 0, 0.2, 1) 0.9s forwards !important; }
 .curtain-valance { animation: valance-auto-open 1.9s cubic-bezier(0.65, 0, 0.2, 1) 0.95s forwards !important; }
 .skip-button { animation: curtain-stage-button-hide 1.5s ease 1.35s forwards !important; }
+
+
+/* Keep the invitation rendered behind the curtain at all times.
+   The curtain itself is the reveal animation; content must never be hidden
+   waiting for a separate animation clock. */
+.reveal-item,
+.invitation-revealed .reveal-item {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
