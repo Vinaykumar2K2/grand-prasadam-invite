@@ -289,3 +289,66 @@
   transform: none !important;
   animation: none !important;
 }
+
+
+/* Full-screen invitation layout: use the entire phone viewport rather than
+   leaving the invitation as a small centered card. */
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+.invitation-page {
+  width: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
+  padding: 0;
+}
+
+.invitation {
+  width: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
+  max-width: none;
+  justify-content: space-evenly;
+  gap: clamp(0.75rem, 2.5vh, 1.5rem);
+  padding: clamp(2rem, 6vh, 4rem) clamp(1.25rem, 6vw, 3rem);
+}
+
+@media (max-width: 540px) {
+  .invitation-page {
+    width: 100%;
+    height: 100dvh;
+    min-height: 100dvh;
+  }
+
+  .invitation {
+    width: 100%;
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: clamp(2rem, 5vh, 3.5rem) clamp(1.1rem, 5vw, 1.8rem);
+    justify-content: space-evenly;
+    gap: 0.75rem;
+  }
+
+  .vinayaka-art {
+    width: clamp(8.5rem, 32vw, 12rem);
+  }
+
+  .event-heading h1 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .event-heading h2 {
+    font-size: clamp(1.05rem, 4vw, 1.35rem);
+  }
+
+  .detail-value {
+    font-size: clamp(0.95rem, 3.3vw, 1.1rem);
+  }
+
+  .invitation-footer p {
+    font-size: clamp(0.9rem, 3.2vw, 1.05rem);
+  }
+}
