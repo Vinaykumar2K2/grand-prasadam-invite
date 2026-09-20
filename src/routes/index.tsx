@@ -59,7 +59,7 @@ function Invitation() {
     <main className="invitation-page">
       <div className="ambient-pattern" aria-hidden="true" />
 
-      <article className={curtainOpen ? "invitation invitation-revealed" : "invitation"}>
+      <article className={curtainOpen ? "invitation invitation-poster invitation-revealed" : "invitation invitation-poster"}>
         <div className="corner-ornament corner-top-left" aria-hidden="true" />
         <div className="corner-ornament corner-top-right" aria-hidden="true" />
         <div className="corner-ornament corner-bottom-left" aria-hidden="true" />
