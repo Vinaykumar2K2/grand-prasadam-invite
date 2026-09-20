@@ -33,13 +33,28 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Inspect build output
+        run: |
+          echo "=== root ==="
+          ls -la
+          echo "=== output directories ==="
+          find . -maxdepth 4 -type d \( -name dist -o -name output -o -name public \) -print
+          echo "=== index files ==="
+          find . -maxdepth 5 -type f -name 'index.html' -print
       - name: Prepare Pages artifact
-        run: touch output/public/.nojekyll
+        run: |
+          mkdir -p site
+          if [ -d "output/public" ]; then cp -R output/public/. site/
+          elif [ -d ".output/public" ]; then cp -R .output/public/. site/
+          elif [ -d "dist/client" ]; then cp -R dist/client/. site/
+          elif [ -d "dist" ]; then cp -R dist/. site/
+          else echo "No static output directory found"; exit 1; fi
+          touch site/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: output/public
+          path: site
 
   deploy:
     needs: build
